@@ -1,0 +1,10 @@
+/mcd-apk-session.json
+/*.exe
+/research/
+*.apk
+*.idsig
+*.har
+*.log
+/.env
+/.env.*
+/麦当劳.apk
