@@ -14,10 +14,13 @@ import (
 )
 
 const (
-	AuthScheme    = "hmac-auth-v1"
+	// AuthScheme identifies the authorization header format.
+	AuthScheme = "hmac-auth-v1"
+	// HashAlgorithm identifies the signature algorithm in that header.
 	HashAlgorithm = "hmac-sha256"
 )
 
+// DefaultSignedHeaders is copied by NewSigner when a signer is constructed.
 var DefaultSignedHeaders = []string{
 	"ct",
 	"language",
@@ -29,6 +32,7 @@ var DefaultSignedHeaders = []string{
 	"x-mcd-gw-v",
 }
 
+// Credentials contains the signing keys, separate from an account session.
 type Credentials struct {
 	AccessKey string
 	SecretKey string
@@ -44,6 +48,7 @@ type Request struct {
 	Headers map[string]string
 }
 
+// SignOptions controls the signing time and selected headers for one request.
 type SignOptions struct {
 	// Time is the client time before TimeOffset is applied. Zero means time.Now().
 	Time time.Time
@@ -53,6 +58,8 @@ type SignOptions struct {
 	SignedHeaders []string
 }
 
+// Signature contains generated headers and diagnostics. Its payload and
+// canonical request can contain private data and should not be logged wholesale.
 type Signature struct {
 	Authorization    string
 	Digest           string
@@ -62,11 +69,13 @@ type Signature struct {
 	SignedHeaders    []string
 }
 
+// Signer holds an immutable copy of the signing configuration.
 type Signer struct {
 	credentials   Credentials
 	signedHeaders []string
 }
 
+// NewSigner validates credentials and copies the default signed headers.
 func NewSigner(credentials Credentials) (*Signer, error) {
 	if credentials.AccessKey == "" {
 		return nil, errors.New("access key is required")

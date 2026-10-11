@@ -1,4 +1,10 @@
 /mcd-apk-session.json
+*.session.json
+/.local/
+/bin/
+/coverage.out
+/coverage.html
+.mdlc-*.tmp
 /*.exe
 /research/
 *.apk
@@ -7,4 +13,3 @@
 *.log
 /.env
 /.env.*
-/麦当劳.apk
