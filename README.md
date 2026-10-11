@@ -4,6 +4,7 @@
 [![Go Version](https://img.shields.io/badge/Go-1.23%2B-00ADD8?logo=go&logoColor=white)](https://go.dev/dl/)
 [![Go Reference](https://img.shields.io/badge/Go_Reference-pkg.go.dev-007d9c)](https://pkg.go.dev/github.com/huey1in/mdlc/mcdsign)
 [![Dependencies](https://img.shields.io/badge/dependencies-standard_library-4c1)](go.mod)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 Go 请求签名库，仅依赖标准库，支持 Go 1.23+。
 
@@ -70,6 +71,7 @@ docs/design.md           接口约定和设计边界
 scripts/check.ps1        本地格式、静态检查、测试与构建
 .github/workflows/ci.yml Windows/Linux 自动检查
 CONTRIBUTING.md          开发与提交规范
+LICENSE                  MIT 开源协议
 ```
 
 本地研究资料位于被 Git 忽略的 `research/`，不属于库的交付范围。
@@ -90,4 +92,6 @@ go build ./...
 
 测试仅构造内存请求，不访问业务服务。CI 在 Windows/Linux 上验证最低 Go 版本及稳定版本，并在 Linux 上运行竞态检查。
 
-仓库尚未声明分发许可证。
+## 许可证
+
+本项目采用 [MIT 开源协议](LICENSE)。
