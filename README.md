@@ -7,7 +7,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![LINUX DO 社区](https://img.shields.io/badge/Community-LINUX%20DO-FFB003)](https://linux.do/)
 
-麦当劳中国 Android App 的非官方 Go 签名库，生成 `Authorization`、`X-HMAC-DIGEST` 请求头，并提供设备 ID 生成。
+麦当劳中国 Android App Go 签名库，生成 `Authorization`、`X-HMAC-DIGEST` 请求头，并提供设备 ID 生成。
 
 [安装](#安装) · [快速开始](#快速开始) · [设备 ID](#设备-id) · [接口参考](#接口参考) · [开发与贡献](#开发与贡献) · [免责声明](#免责声明)
 
