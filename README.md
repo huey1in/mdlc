@@ -5,7 +5,6 @@
 [![Go Reference](https://img.shields.io/badge/Go_Reference-pkg.go.dev-007d9c)](https://pkg.go.dev/github.com/huey1in/mdlc/mcdsign)
 [![Dependencies](https://img.shields.io/badge/dependencies-standard_library-4c1)](go.mod)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![LINUX DO 社区](https://img.shields.io/badge/Community-LINUX%20DO-FFB003)](https://linux.do/)
 
 麦当劳中国 Android App Go 签名库，生成 `Authorization`、`X-HMAC-DIGEST` 请求头，并提供设备 ID 生成。
 
